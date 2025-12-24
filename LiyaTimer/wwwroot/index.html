@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>LiyaTimer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#89f7fe">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="mode-icon">
+            <img id="modeImage" src="images/sun.svg" alt="">
+        </div>
+
+        <div class="event-name">Наша встреча</div>
+
+        <div class="timer">
+            <div class="time-block">
+                <span id="days">0</span>
+                <span class="label">дней</span>
+            </div>
+
+            <div class="time-block">
+                <span id="hours">00</span>
+                <span class="label">часов</span>
+            </div>
+
+            <div class="time-block">
+                <span id="minutes">00</span>
+                <span class="label">минут</span>
+            </div>
+
+            <div class="time-block">
+                <span id="seconds">00</span>
+                <span class="label">секунд</span>
+            </div>
+
+        </div>
+        <div class="caption" id="caption">
+            Я считаю секунды до тебя
+        </div>
+
+    </div>
+
+    <script src="/js/timer.js"></script>
+</body>
+</html>
