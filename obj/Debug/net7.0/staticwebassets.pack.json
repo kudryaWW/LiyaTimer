@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\images\\moon.svg",
+      "PackagePath": "staticwebassets\\images\\moon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\images\\sun.svg",
+      "PackagePath": "staticwebassets\\images\\sun.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\images\\sunset.svg",
+      "PackagePath": "staticwebassets\\images\\sunset.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\js\\timer.js",
+      "PackagePath": "staticwebassets\\js\\timer.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.LiyaTimer.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.LiyaTimer.props",
+      "PackagePath": "build\\LiyaTimer.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.LiyaTimer.props",
+      "PackagePath": "buildMultiTargeting\\LiyaTimer.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.LiyaTimer.props",
+      "PackagePath": "buildTransitive\\LiyaTimer.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
