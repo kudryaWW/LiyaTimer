@@ -2,7 +2,7 @@
 const eventDate = new Date("2025-12-25T08:00:00");
 //месяцы с 0 (2 = март)
 console.log("timer.js загружен");
-alert("LiyaTimer version 1.1");
+alert("LiyaTimer version 1.2");
 
 
 function getCurrentMode() {
