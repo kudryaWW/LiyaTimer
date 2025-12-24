@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\LiyaTimer.csproj",
+      "projectUniqueName": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer.csproj",
       "projectName": "LiyaTimer",
-      "projectPath": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\LiyaTimer.csproj",
+      "projectPath": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer.csproj",
       "packagesPath": "C:\\Users\\Kirill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\obj\\",
+      "outputPath": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kirill\\AppData\\Roaming\\NuGet\\NuGet.Config",

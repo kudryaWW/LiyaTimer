@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ierfElSvp7u+LD/jJqJPj2p2sTofXPJOVb32W5lI5nA=",
+  "Hash": "NY0LzhPIyK3nCpcMoR/vtNfM9u8QPPWhqpGavkvbfFc=",
   "Source": "LiyaTimer",
   "BasePath": "_content/LiyaTimer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "LiyaTimer\\wwwroot",
       "Source": "LiyaTimer",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\css\\styles.css",
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\css\\styles.css",
       "SourceId": "LiyaTimer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -34,10 +34,44 @@
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\images\\moon.svg",
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\icons\\icon-192.png",
       "SourceId": "LiyaTimer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
+      "BasePath": "_content/LiyaTimer",
+      "RelativePath": "icons/icon-192.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\icon-192.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\icons\\icon-512.png",
+      "SourceId": "LiyaTimer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
+      "BasePath": "_content/LiyaTimer",
+      "RelativePath": "icons/icon-512.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icons\\icon-512.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\images\\moon.svg",
+      "SourceId": "LiyaTimer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "RelativePath": "images/moon.svg",
       "AssetKind": "All",
@@ -51,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\images\\moon.svg"
     },
     {
-      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\images\\sun.svg",
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\images\\sun.svg",
       "SourceId": "LiyaTimer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "RelativePath": "images/sun.svg",
       "AssetKind": "All",
@@ -68,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sun.svg"
     },
     {
-      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\images\\sunset.svg",
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\images\\sunset.svg",
       "SourceId": "LiyaTimer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "RelativePath": "images/sunset.svg",
       "AssetKind": "All",
@@ -85,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sunset.svg"
     },
     {
-      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\index.html",
       "SourceId": "LiyaTimer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -102,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\js\\timer.js",
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\js\\timer.js",
       "SourceId": "LiyaTimer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\LiyaTimer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
       "BasePath": "_content/LiyaTimer",
       "RelativePath": "js/timer.js",
       "AssetKind": "All",
@@ -117,6 +151,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\timer.js"
+    },
+    {
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\manifest.json",
+      "SourceId": "LiyaTimer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
+      "BasePath": "_content/LiyaTimer",
+      "RelativePath": "manifest.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manifest.json"
+    },
+    {
+      "Identity": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\service-worker.js",
+      "SourceId": "LiyaTimer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kirill\\Documents\\LiyaTimer\\wwwroot\\",
+      "BasePath": "_content/LiyaTimer",
+      "RelativePath": "service-worker.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\service-worker.js"
     }
   ]
 }
