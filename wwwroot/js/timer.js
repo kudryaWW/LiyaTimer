@@ -1,22 +1,23 @@
-//ДАТА ВСТРЕЧИ
+// ======================
+// НАСТРОЙКИ
+// ======================
 const eventDate = new Date("2025-12-25T08:00:00");
-//месяцы с 0 (2 = март)
-console.log("timer.js загружен");
-alert("LiyaTimer version 1.2");
+console.log("LiyaTimer v1.3");
 
-
+// ======================
+// РЕЖИМЫ
+// ======================
 function getCurrentMode() {
     const hour = new Date().getHours();
 
-    if (hour >= 6 && hour < 16) return "sun";
-    if (hour >= 16 && hour < 20) return "sunset";
-    return "moon";
+    if (hour >= 7 && hour < 19) return "day";
+    if (hour >= 19 && hour < 23) return "romantic";
+    return "night";
 }
 
-
-
-
-
+// ======================
+// ПОДПИСИ
+// ======================
 const captions = {
     day: [
         "Сегодня мы стали ещё ближе",
@@ -37,53 +38,54 @@ const captions = {
         "Засыпаю с мыслями о нас"
     ]
 };
-function getTimeBasedCaption(mode) {
+
+function getRandomCaption(mode) {
     const list = captions[mode];
     return list[Math.floor(Math.random() * list.length)];
 }
-let currentCaption = "";
 
-
+// ======================
+// ФОН + РЕЖИМ
+// ======================
 const skyFront = document.querySelector(".sky-front");
 const skyBack = document.querySelector(".sky-back");
+const captionEl = document.getElementById("caption");
+const modeImage = document.getElementById("modeImage");
 
-function setMode(mode) {
-    // копируем текущий фон назад
+let currentMode = "";
+
+function applyMode() {
+    const mode = getCurrentMode();
+    if (mode === currentMode) return;
+
+    currentMode = mode;
+
+    // фон
     skyBack.style.background = getComputedStyle(skyFront).background;
-
-    // ставим новый класс
     document.body.className = `mode-${mode}`;
 
-    // запускаем fade
     skyFront.style.opacity = 0;
+    setTimeout(() => (skyFront.style.opacity = 1), 50);
 
-    setTimeout(() => {
-        skyFront.style.opacity = 1;
-    }, 50);
-}
+    // картинка
+    if (mode === "day") modeImage.src = "images/sun.svg";
+    if (mode === "romantic") modeImage.src = "images/sunset.svg";
+    if (mode === "night") modeImage.src = "images/moon.svg";
 
-function updateCaption() {
-    const mode = getCurrentMode();
-    const captionEl = document.getElementById("caption");
-    console.log("updateCaption called");
-
+    // подпись
     captionEl.style.opacity = 0;
-
     setTimeout(() => {
-        captionEl.textContent = getTimeBasedCaption(mode);
+        captionEl.textContent = getRandomCaption(mode);
         captionEl.style.opacity = 0.9;
     }, 500);
-
 }
-updateCaption();
-setInterval(updateCaption, 30000);
 
-
+// ======================
+// ТАЙМЕР
+// ======================
 function updateTimer() {
     const now = new Date();
     let diff = eventDate - now;
-    const mode = getCurrentMode();
-    document.body.className = `mode-${mode}`;
     if (diff < 0) diff = 0;
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -97,38 +99,18 @@ function updateTimer() {
     document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
 }
 
-updateTimer();
-function getCurrentMode() {
-    const hour = new Date().getHours();
-
-    if (hour >= 7 && hour < 19) return "day";
-    if (hour >= 19 && hour < 23) return "romantic";
-    return "night";
-}
-
-function applyMode() {
-    const mode = getCurrentMode();
-    document.body.className = mode;
-
-    const img = document.getElementById("modeImage");
-
-    if (mode === "day") img.src = "images/sun.svg";
-    if (mode === "romantic") img.src = "images/sunset.svg";
-    if (mode === "night") img.src = "images/moon.svg";
-
-    updateCaption(); // ← ВАЖНО
-}
-
-
-
+// ======================
+// ЗАПУСК
+// ======================
 applyMode();
-
-setInterval(applyMode, 60 * 1000); // проверка раз в минуту
+updateTimer();
 
 setInterval(updateTimer, 1000);
+setInterval(applyMode, 60 * 1000);
 
+// ======================
+// SERVICE WORKER
+// ======================
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js");
 }
-
-
