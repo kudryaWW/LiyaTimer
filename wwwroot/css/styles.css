@@ -134,9 +134,18 @@ body.mode-night .sky-night {
 }
 
 .caption {
-    opacity: 0;
-    transition: opacity 0.6s ease;
+    margin-top: 20px;
+    margin-bottom: 28px;
+    text-align: center;
 }
+.auto-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
 
     .caption.show {
         opacity: 0.9;
@@ -195,10 +204,12 @@ body.mode-night .sky-night {
 /* ===== РУЧНОЙ ВЫБОР ===== */
 
 .mode-switcher {
-    display: none;
-    gap: 14px;
+    display: flex;
     justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
 }
+
 
     .mode-switcher button {
         background: rgba(255,255,255,0.25);
@@ -209,10 +220,17 @@ body.mode-night .sky-night {
         font-size: 20px;
         cursor: pointer;
     }
+.container {
+    padding-bottom: 32px;
+}
 
     .mode-switcher.show {
         display: flex;
     }
+.mode-switcher button {
+    transform: scale(0.95);
+}
+
 .stars {
     position: absolute;
     inset: 0;
