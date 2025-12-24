@@ -11,42 +11,51 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="mode-icon">
-            <img id="modeImage" src="images/sun.svg" alt="">
-        </div>
-
-        <div class="event-name">Наша встреча</div>
-
-        <div class="timer">
-            <div class="time-block">
-                <span id="days">0</span>
-                <span class="label">дней</span>
-            </div>
-
-            <div class="time-block">
-                <span id="hours">00</span>
-                <span class="label">часов</span>
-            </div>
-
-            <div class="time-block">
-                <span id="minutes">00</span>
-                <span class="label">минут</span>
-            </div>
-
-            <div class="time-block">
-                <span id="seconds">00</span>
-                <span class="label">секунд</span>
-            </div>
-
-        </div>
-        <div class="caption" id="caption">
-            Я считаю секунды до тебя
-        </div>
-
+    <div id="background">
+        <div class="sky sky-back"></div>
+        <div class="sky sky-front"></div>
+        <div class="celestial"></div>
     </div>
 
+    <div id="app">
+        <!-- твой текущий контент -->
+
+
+        <div class="container">
+            <div class="mode-icon">
+                <img id="modeImage" src="images/sun.svg" alt="">
+            </div>
+
+            <div class="event-name">Наша встреча</div>
+
+            <div class="timer">
+                <div class="time-block">
+                    <span id="days">0</span>
+                    <span class="label">дней</span>
+                </div>
+
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <span class="label">часов</span>
+                </div>
+
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <span class="label">минут</span>
+                </div>
+
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <span class="label">секунд</span>
+                </div>
+
+            </div>
+            <div class="caption" id="caption">
+                Я считаю секунды до тебя
+            </div>
+
+        </div>
+    </div>
     <script src="/js/timer.js"></script>
 </body>
 </html>

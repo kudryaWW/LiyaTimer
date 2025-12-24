@@ -3,23 +3,87 @@
     margin: 0;
     padding: 0;
 }
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    min-height: 100vh;
-    transition: background 1s ease;
-    color: white;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    overflow: hidden;
 }
 
-    body.day {
-        background: linear-gradient(135deg, #89f7fe, #66a6ff);
-    }
-    body.romantic {
-        background: linear-gradient(135deg, #fbc2eb, #a18cd1);
-    }
-    body.night {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    transition: background 1s ease;
+}
+
+.sky {
+    position: absolute;
+    inset: 0;
+    transition: opacity 1.5s ease;
+}
+
+.sky-back {
+    z-index: 1;
+}
+
+.sky-front {
+    z-index: 2;
+    opacity: 1;
+}
+.mode-day .sky-front {
+    background: linear-gradient(#89f7fe, #66a6ff);
+}
+
+.mode-sunset .sky-front {
+    background: linear-gradient(#ff9a9e, #fad0c4);
+}
+
+.mode-night .sky-front {
+    background: linear-gradient(#0f2027, #203a43, #2c5364);
+}
+
+
+.celestial {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+}
+/* ДЕНЬ */
+.mode-day .sky {
+    background: linear-gradient(#89f7fe, #66a6ff);
+}
+
+.mode-day .celestial {
+    background: #fff9c4;
+    box-shadow: 0 0 40px rgba(255, 255, 200, 0.8);
+}
+
+/* ЗАКАТ */
+.mode-sunset .sky {
+    background: linear-gradient(#ff9a9e, #fad0c4);
+}
+
+.mode-sunset .celestial {
+    background: #ffcc80;
+    top: 60%;
+}
+
+/* НОЧЬ */
+.mode-night .sky {
+    background: linear-gradient(#0f2027, #203a43, #2c5364);
+}
+
+.mode-night .celestial {
+    background: #e0e0e0;
+    box-shadow: 0 0 30px rgba(200, 200, 255, 0.6);
+}
+
+
 
 
 

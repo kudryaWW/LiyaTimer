@@ -2,8 +2,10 @@
 const eventDate = new Date("2025-12-25T08:00:00");
 //месяцы с 0 (2 = март)
 console.log("timer.js загружен");
-alert("timer.js выполняется");
+alert("LiyaTimer version 1.1");
 
+
+document.body.className = `mode-${mode}`;
 
 const captions = {
     day: [
@@ -30,6 +32,25 @@ function getTimeBasedCaption(mode) {
     return list[Math.floor(Math.random() * list.length)];
 }
 let currentCaption = "";
+
+
+const skyFront = document.querySelector(".sky-front");
+const skyBack = document.querySelector(".sky-back");
+
+function setMode(mode) {
+    // копируем текущий фон назад
+    skyBack.style.background = getComputedStyle(skyFront).background;
+
+    // ставим новый класс
+    document.body.className = `mode-${mode}`;
+
+    // запускаем fade
+    skyFront.style.opacity = 0;
+
+    setTimeout(() => {
+        skyFront.style.opacity = 1;
+    }, 50);
+}
 
 function updateCaption() {
     const mode = getCurrentMode();
