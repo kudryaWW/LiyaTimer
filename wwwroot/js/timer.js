@@ -5,7 +5,17 @@ console.log("timer.js загружен");
 alert("LiyaTimer version 1.1");
 
 
-document.body.className = `mode-${mode}`;
+function getCurrentMode() {
+    const hour = new Date().getHours();
+
+    if (hour >= 6 && hour < 16) return "sun";
+    if (hour >= 16 && hour < 20) return "sunset";
+    return "moon";
+}
+
+
+
+
 
 const captions = {
     day: [
@@ -72,7 +82,8 @@ setInterval(updateCaption, 30000);
 function updateTimer() {
     const now = new Date();
     let diff = eventDate - now;
-
+    const mode = getCurrentMode();
+    document.body.className = `mode-${mode}`;
     if (diff < 0) diff = 0;
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
