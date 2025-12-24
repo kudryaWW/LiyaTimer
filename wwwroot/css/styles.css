@@ -230,6 +230,12 @@ body.mode-night .sky-night {
 .mode-switcher button {
     transform: scale(0.95);
 }
+#manualModes {
+    display: none;
+}
+#manualModes {
+    display: none;
+}
 
 .stars {
     position: absolute;
