@@ -224,18 +224,21 @@ body.mode-night .sky-night {
     padding-bottom: 32px;
 }
 
-    .mode-switcher.show {
-        display: flex;
-    }
+    
 .mode-switcher button {
     transform: scale(0.95);
 }
 #manualModes {
     display: none;
 }
-#manualModes {
-    display: none;
-}
+
+    #manualModes.show {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 8px;
+    }
+
 
 .stars {
     position: absolute;

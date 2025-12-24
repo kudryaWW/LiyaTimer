@@ -1,5 +1,5 @@
 const eventDate = new Date("2025-12-25T08:00:00");
-console.log("LiyaTimer v2.0");
+console.log("LiyaTimer v2.1");
 
 // ===== СОСТОЯНИЕ =====
 let autoMode = true;
@@ -23,28 +23,16 @@ function getCurrentMode() {
 // ===== ПОДПИСИ =====
 const captions = {
     day: [
-        "Каждый день приближает нас",
-        "Я улыбаюсь, думая о тебе",
-        "Даже обычный день с тобой особенный",
-        "Всё самое хорошее впереди"
-       
+        "Сегодня ещё один день ближе к нам",
+        "Я улыбаюсь, думая о тебе"
     ],
     romantic: [
         "Ты уже так близко",
-        "Скоро мы будем вместе",
-        "Я считаю минуты до тебя",
-        "Думаю о тебе особенно сильно",
-        "Я жду тебя"
+        "Скоро мы будем вместе"
     ],
     night: [
         "Даже ночью я думаю о тебе",
-        "Спокойной ночи, любимая",
-        "Я рядом, даже если далеко",
-        "Эта ночь короче, чем кажется",
-        "Думаю о тебе перед сном",
-        "Пусть эта ночь будет спокойной",
-        "",
-
+        "Спокойной ночи, любимая"
     ]
 };
 
@@ -53,7 +41,7 @@ function randomCaption(mode) {
     return list[Math.floor(Math.random() * list.length)];
 }
 
-// ===== ПЛАВНАЯ СМЕНА ПОДПИСИ =====
+// ===== ПЛАВНАЯ ПОДПИСЬ =====
 function setCaptionWithFade(text) {
     if (text === currentCaption) return;
 
@@ -67,8 +55,10 @@ function setCaptionWithFade(text) {
 }
 
 // ===== ПРИМЕНЕНИЕ РЕЖИМА =====
-function applyMode() {
-    const mode = autoMode ? getCurrentMode() : manualMode;
+function applyMode(forceMode = null) {
+    const mode = forceMode
+        ? forceMode
+        : (autoMode ? getCurrentMode() : manualMode);
 
     document.body.className = `mode-${mode}`;
 
@@ -82,15 +72,17 @@ function applyMode() {
 // ===== ПЕРЕКЛЮЧАТЕЛЬ =====
 toggle.addEventListener("change", () => {
     autoMode = toggle.checked;
+
     manualPanel.classList.toggle("show", !autoMode);
+
     applyMode();
 });
 
 // ===== РУЧНЫЕ КНОПКИ =====
-document.querySelectorAll(".mode-switcher button").forEach(btn => {
+manualPanel.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("click", () => {
         manualMode = btn.dataset.mode;
-        applyMode();
+        applyMode(manualMode);
     });
 });
 
@@ -117,7 +109,9 @@ applyMode();
 updateTimer();
 
 setInterval(updateTimer, 1000);
-setInterval(applyMode, 60000);
+setInterval(() => {
+    if (autoMode) applyMode();
+}, 60000);
 
 // ===== ВОЗВРАТ В ПРИЛОЖЕНИЕ =====
 document.addEventListener("visibilitychange", () => {
