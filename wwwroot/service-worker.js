@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = "liya-timer-v7";
+﻿const CACHE_NAME = "liya-timer-v8";
 
 self.addEventListener("install", event => {
     self.skipWaiting();

@@ -88,8 +88,14 @@ body.mode-night .sky-night {
 }
 
 .container {
-    text-align: center;
-    padding: 20px;
+    position: relative;
+    padding: 24px 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transition: box-shadow 0.4s ease;
 }
 
 .mode-icon img {
@@ -110,12 +116,12 @@ body.mode-night .sky-night {
 }
 
 .time-block {
-    background: rgba(255,255,255,0.18);
-    backdrop-filter: blur(10px);
-    padding: 12px 16px;
-    border-radius: 14px;
-    min-width: 70px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    padding: 10px 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 6px 16px rgba(0,0,0,0.12);
 }
+
 
     .time-block span:first-child {
         font-size: 26px;
@@ -128,10 +134,14 @@ body.mode-night .sky-night {
 }
 
 .caption {
-    font-size: 16px;
-    opacity: 0.9;
-    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
+
+    .caption.show {
+        opacity: 0.9;
+    }
+
 
 /* ===== ПЕРЕКЛЮЧАТЕЛЬ ===== */
 
@@ -206,49 +216,116 @@ body.mode-night .sky-night {
 .stars {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(2px 2px at 20% 30%, #fff, transparent), radial-gradient(1.5px 1.5px at 40% 70%, #fff, transparent), radial-gradient(1px 1px at 60% 40%, #fff, transparent), radial-gradient(2px 2px at 80% 60%, #fff, transparent), radial-gradient(1px 1px at 30% 80%, #fff, transparent);
+    pointer-events: none;
     opacity: 0;
-    animation: starsTwinkle 6s ease-in-out infinite alternate;
     transition: opacity 2s ease-in-out;
 }
 
-/* включаем только ночью */
-body.mode-night .stars {
-    opacity: 0.8;
-}
-
-@keyframes starsTwinkle {
-    from {
-        opacity: 0.5;
+    .stars::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(1px 1px at 10% 20%, #fff, transparent), radial-gradient(1.5px 1.5px at 25% 40%, #fff, transparent), radial-gradient(2px 2px at 40% 10%, #fff, transparent), radial-gradient(1px 1px at 55% 60%, #fff, transparent), radial-gradient(1.5px 1.5px at 70% 30%, #fff, transparent), radial-gradient(2px 2px at 85% 50%, #fff, transparent), radial-gradient(1px 1px at 30% 75%, #fff, transparent), radial-gradient(1.5px 1.5px at 60% 80%, #fff, transparent);
+        animation: starTwinkle 4s ease-in-out infinite alternate;
     }
 
-    to {
-        opacity: 0.9;
+/* включаем ночью */
+body.mode-night .stars {
+    opacity: 1;
+}
+
+@keyframes starTwinkle {
+    0% {
+        filter: brightness(0.7);
+    }
+
+    100% {
+        filter: brightness(1.2);
     }
 }
 .clouds {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at 10% 30%, rgba(255,255,255,0.4) 0%, transparent 60%), radial-gradient(circle at 40% 20%, rgba(255,255,255,0.35) 0%, transparent 65%), radial-gradient(circle at 70% 40%, rgba(255,255,255,0.3) 0%, transparent 70%);
-    background-size: 200% 100%;
-    animation: cloudsMove 120s linear infinite;
+    pointer-events: none;
+    overflow: hidden;
     opacity: 0;
     transition: opacity 2s ease-in-out;
 }
 
-/* день и романтика */
-body.mode-day .clouds,
-body.mode-romantic .clouds {
-    opacity: 0.6;
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    filter: blur(12px);
 }
 
-@keyframes cloudsMove {
+    /* слой 1 */
+    .cloud.c1 {
+        width: 320px;
+        height: 120px;
+        top: 20%;
+        left: -400px;
+        animation: cloudMove1 160s linear infinite;
+    }
+
+    /* слой 2 */
+    .cloud.c2 {
+        width: 420px;
+        height: 150px;
+        top: 40%;
+        left: -500px;
+        opacity: 0.45;
+        animation: cloudMove2 220s linear infinite;
+    }
+
+    /* слой 3 */
+    .cloud.c3 {
+        width: 260px;
+        height: 100px;
+        top: 55%;
+        left: -300px;
+        opacity: 0.35;
+        animation: cloudMove3 300s linear infinite;
+    }
+
+/* показываем днём */
+body.mode-day .clouds,
+body.mode-romantic .clouds {
+    opacity: 1;
+}
+
+@keyframes cloudMove1 {
+    to {
+        transform: translateX(160vw);
+    }
+}
+
+@keyframes cloudMove2 {
+    to {
+        transform: translateX(180vw);
+    }
+}
+
+@keyframes cloudMove3 {
+    to {
+        transform: translateX(200vw);
+    }
+}
+
+
+body.resume .container {
+    animation: resumeFade 0.6s ease;
+}
+
+@keyframes resumeFade {
     from {
-        background-position: 0% 0%;
+        opacity: 0.6;
+        transform: scale(0.98);
     }
 
     to {
-        background-position: 200% 0%;
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
