@@ -1,27 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiyaTimer</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#89f7fe">
-
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+
     <div id="background">
-        <div class="sky sky-back"></div>
-        <div class="sky sky-front"></div>
+        <div class="sky sky-day"></div>
+        <div class="sky sky-romantic"></div>
+        <div class="sky sky-night"></div>
         <div class="celestial"></div>
     </div>
 
     <div id="app">
-        <!-- твой текущий контент -->
-
-
         <div class="container">
+
             <div class="mode-icon">
                 <img id="modeImage" src="images/sun.svg" alt="">
             </div>
@@ -33,29 +31,41 @@
                     <span id="days">0</span>
                     <span class="label">дней</span>
                 </div>
-
                 <div class="time-block">
                     <span id="hours">00</span>
                     <span class="label">часов</span>
                 </div>
-
                 <div class="time-block">
                     <span id="minutes">00</span>
                     <span class="label">минут</span>
                 </div>
-
                 <div class="time-block">
                     <span id="seconds">00</span>
                     <span class="label">секунд</span>
                 </div>
-
             </div>
-            <div class="caption" id="caption">
-                Я считаю секунды до тебя
+
+            <div class="caption" id="caption">Ты уже так близко</div>
+
+            <!-- ПЕРЕКЛЮЧАТЕЛЬ -->
+            <div class="mode-control">
+                <label class="switch">
+                    <input type="checkbox" id="modeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="mode-label">Авто режим</span>
+            </div>
+
+            <!-- РУЧНОЙ ВЫБОР -->
+            <div class="mode-switcher" id="manualModes">
+                <button data-mode="day">☀️</button>
+                <button data-mode="romantic">🌅</button>
+                <button data-mode="night">🌙</button>
             </div>
 
         </div>
     </div>
+
     <script src="/js/timer.js"></script>
 </body>
 </html>
