@@ -203,3 +203,52 @@ body.mode-night .sky-night {
     .mode-switcher.show {
         display: flex;
     }
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(2px 2px at 20% 30%, #fff, transparent), radial-gradient(1.5px 1.5px at 40% 70%, #fff, transparent), radial-gradient(1px 1px at 60% 40%, #fff, transparent), radial-gradient(2px 2px at 80% 60%, #fff, transparent), radial-gradient(1px 1px at 30% 80%, #fff, transparent);
+    opacity: 0;
+    animation: starsTwinkle 6s ease-in-out infinite alternate;
+    transition: opacity 2s ease-in-out;
+}
+
+/* включаем только ночью */
+body.mode-night .stars {
+    opacity: 0.8;
+}
+
+@keyframes starsTwinkle {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+.clouds {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 10% 30%, rgba(255,255,255,0.4) 0%, transparent 60%), radial-gradient(circle at 40% 20%, rgba(255,255,255,0.35) 0%, transparent 65%), radial-gradient(circle at 70% 40%, rgba(255,255,255,0.3) 0%, transparent 70%);
+    background-size: 200% 100%;
+    animation: cloudsMove 120s linear infinite;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* день и романтика */
+body.mode-day .clouds,
+body.mode-romantic .clouds {
+    opacity: 0.6;
+}
+
+@keyframes cloudsMove {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 200% 0%;
+    }
+}
+
